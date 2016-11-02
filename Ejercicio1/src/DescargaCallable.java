@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.concurrent.Callable;
 
 public class DescargaCallable implements Callable<String> {
@@ -12,10 +13,13 @@ public class DescargaCallable implements Callable<String> {
 	
 	@Override
 	public String call() throws Exception {
+		String mensaje;
 		// TODO: esperar
-		
+		Thread.sleep(tiempoDescarga);
 		// TODO: devolver mensaje "Archivo X descargado en T segundos"
-		return "";
+		mensaje = "Archivo " + archivo + " descargado en "+ tiempoDescarga +" segundos";
+		
+		return mensaje;
 	}
 
 }
